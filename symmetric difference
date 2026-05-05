@@ -1,0 +1,15 @@
+# Read input for Set M
+m_size = int(input())
+m_set = set(map(int, input().split()))
+
+# Read input for Set N
+n_size = int(input())
+n_set = set(map(int, input().split()))
+
+# Calculate Symmetric Difference
+# This finds elements in M or N, but not both
+diff = m_set.symmetric_difference(n_set)
+
+# Sort the result and print each element on a new line
+for val in sorted(diff):
+    print(val)
